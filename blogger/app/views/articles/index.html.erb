@@ -4,7 +4,8 @@
 	<ul id="articles" style="margin-top: 45px; margin-bottom: 50px;">
 		<% @articles.each do |article| %>
 			<li>
-				<%= link_to article.title, article_path(article) %> <p><small> <%= article.created_at.to_formatted_s(:long_ordinal)  %></small></p>
+				<h3><%= link_to article.title, article_path(article) %> </h3>
+				<p> <%= article.created_at.to_formatted_s(:long_ordinal)  %></p>
 			</li>
 		<% end %>
 	</ul>

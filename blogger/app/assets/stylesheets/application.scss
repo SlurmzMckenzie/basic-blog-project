@@ -15,14 +15,17 @@ $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !defaul
 
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-base:        $font-family-sans-serif;
-$font-size-base:          20px !default;
+$font-size-base:          14px !default;
 $headings-font-weight:    700 !default;
 
-$font-size-h1:            floor(($font-size-base * 2.3)) !default; 
-$font-size-small:         ceil(($font-size-base * 0.70)) !default; // ~12px
+$font-size-h1:            floor(($font-size-base * 3)) !default; 
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $headings-font-family:    $font-family-sans-serif !default;
-.article-body { font-family: $font-family-serif;}
+.article-body { 
+	font-family: $font-family-serif;
+	font-size: 	22px 
+}
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
