@@ -21,7 +21,7 @@ $headings-font-weight:    700 !default;
 $font-size-h1:            floor(($font-size-base * 2.3)) !default; 
 
 $headings-font-family:    $font-family-sans-serif !default;
-p { font-family: $font-family-serif;}
+.article-body { font-family: $font-family-serif;}
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
