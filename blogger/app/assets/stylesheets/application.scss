@@ -19,6 +19,7 @@ $font-size-base:          20px !default;
 $headings-font-weight:    700 !default;
 
 $font-size-h1:            floor(($font-size-base * 2.3)) !default; 
+$font-size-small:         ceil(($font-size-base * 0.70)) !default; // ~12px
 
 $headings-font-family:    $font-family-sans-serif !default;
 .article-body { font-family: $font-family-serif;}
