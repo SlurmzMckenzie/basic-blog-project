@@ -4,6 +4,15 @@
 
 	<p style="margin-top:40px; margin-bottom: 45px" class="article-body"><%= @article.body %></p>
 
+	<p>
+		Tags:
+		<% @article.tags.each do |tag| %>
+			<%= link_to tag.name, tag_path(tag), class: 'label label-default' %>
+		<% end %>
+	</p>
+	<br>
+	<hr>
+
 	<h3>Comments (<%= @article.comments.size %>)</h3>
 	<%= render partial: 'articles/comment', collection: @article.comments %>
 	<hr>

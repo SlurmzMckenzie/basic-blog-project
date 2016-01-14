@@ -6,10 +6,16 @@
 			<li>
 				<h3><%= link_to article.title, article_path(article) %> </h3>
 				<p> <%= article.created_at.to_formatted_s(:long_ordinal)  %></p>
+				<p>Tags:
+					<% article.tags.each do |tag| %>
+						<%= link_to tag.name, tag_path(tag), class: 'label label-default' %>
+					<% end %>
+				</p>
 			</li>
 		<% end %>
 	</ul>
-
+	<hr>
 	<%= link_to "Create a New Article", new_article_path, class: "new_article", class: "btn btn-primary" %>
+	<%= link_to "Browse Tags List >>", tags_path, class: "pull-right"%>
 
 </div>
