@@ -2,7 +2,9 @@ class Article < ActiveRecord::Base
 	has_many :comments
 	has_many :taggings
 	has_many :tags, through: :taggings
-
+	has_attached_file :image, styles: { large: "800x800>", medium: "300x300>", thumb: "100x100>" }
+	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+	
 	def tag_list
 		self.tags.collect do |tag|
 			tag.name
@@ -15,7 +17,6 @@ class Article < ActiveRecord::Base
 		self.tags = new_or_found_tags
 	end
 
-	has_attached_file :image
-	validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
 
 end

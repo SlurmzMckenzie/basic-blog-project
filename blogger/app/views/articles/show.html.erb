@@ -2,6 +2,11 @@
 	<h1 style="margin-top:50px;"><%= @article.title %></h1>
 	<p>Posted <%= distance_of_time_in_words_to_now(@article.created_at) %> ago</p>
 
+	<p class="text-center"><% if @article.image.exists? %>
+		<%= image_tag @article.image.url(:medium) %><br/>
+	<% end %>
+	</p>
+
 	<p style="margin-top:40px; margin-bottom: 45px" class="article-body"><%= @article.body %></p>
 
 	<p>
