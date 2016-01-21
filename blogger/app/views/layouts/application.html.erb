@@ -12,6 +12,17 @@
 		<%= flash_messages %>
 
 		<%= yield %>
+		
+		<div class="col-md-8 col-md-offset-2">
+		<hr>
+			<% if logged_in? %>
+				<%= "Logged in as #{current_user.email}" %>
+				<%= link_to "Logout", logout_path, :class => "btn btn-link pull-right" %>
+			<% else %>
+				Logged out
+				<%= link_to "Login", login_path, :class => "btn btn-link pull-right" %>
+			<% end %>
+		</div>
 	</div>
 </body>
 </html>
