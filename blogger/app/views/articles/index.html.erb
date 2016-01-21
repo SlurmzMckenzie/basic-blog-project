@@ -15,7 +15,9 @@
 		<% end %>
 	</ul>
 	<hr>
-	<%= link_to "Create a New Article", new_article_path, class: "new_article", class: "btn btn-primary" %>
+	<% if logged_in? %>
+		<%= link_to "Create a New Article", new_article_path, class: "new_article", class: "btn btn-primary" %>
+	<% end %>
 	<%= link_to "Browse Tags List >>", tags_path, class: "btn btn-link pull-right"%>
 
 </div>

@@ -26,6 +26,8 @@
 
 
 	<%= link_to "<< Back to Articles List", articles_path%>
-	<%= link_to "edit", edit_article_path(@article), class: 'btn btn-default pull-right' %>
+	<% if logged_in? %>
+		<%= link_to "edit", edit_article_path(@article), class: 'btn btn-default pull-right' %>
+	<% end %>
 
 </div>
